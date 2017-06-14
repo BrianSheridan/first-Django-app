@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2> Main Page</h2>
+
+<h3>List of Contacts</h3>
+
+<ul>
+    {% for contact in contacts_list %}
+       <li><img height="200" width="200" src="/media/{{ contact.image }}"> {{contact}} - {{contact.mobile}} - {{contact.email}}</li>
+
+    {% endfor %}
+</ul> 
+<a href="add">Add Contact</a>           
+{% endblock content %}
